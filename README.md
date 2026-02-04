@@ -5,16 +5,11 @@ FastAPI 기반의 환율 계산 API 서버입니다.
 프론트엔드(Vercel)에서 호출하여 환율 변환 결과를 제공합니다.
 
 🔧 Tech Stack
-
-Python 3
-
-FastAPI
-
-Uvicorn
-
-Docker (Render 배포)
-
-REST API
+- Python 3
+- FastAPI
+- Uvicorn
+- Docker (Render 배포)
+- REST API
 
 📁 Project Structure
 backend/
@@ -62,7 +57,7 @@ https://<backend-domain>.onrender.com/docs
 🔐 CORS Configuration
 
 프론트엔드(Vercel)에서 접근 가능하도록 CORS 설정이 되어 있습니다.
-
+'''
 from fastapi.middleware.cors import CORSMiddleware
 
 app.add_middleware(
@@ -72,8 +67,7 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
-
+'''
 ⚠️ 운영 환경에서는 allow_origins를 특정 도메인으로 제한하는 것을 권장합니다.
 
 🛠 Local Development
@@ -87,27 +81,18 @@ uvicorn api_server:app --reload
 http://127.0.0.1:8000/docs
 
 ☁️ Deployment
-
-Render를 사용하여 배포
-
-GitHub push 시 자동 배포
-
-Docker 기반 실행
-
+- Render를 사용하여 배포
+- GitHub push 시 자동 배포
+- Docker 기반 실행
 Render 무료 플랜 특성상 첫 요청 시 서버가 깨워지는 데 시간이 걸릴 수 있습니다.
 
 🔗 Related Projects
-
-Frontend: React + Vite (Vercel)
-
-Live Demo: Vercel 배포 링크 제공
+- Frontend: React + Vite (Vercel)
+- Live Demo: Vercel 배포 링크 제공
 
 ✨ Notes
-
 환율 데이터는 외부 API에 의존하므로 응답 시간이 변동될 수 있습니다.
-
 API 안정성을 위해 예외 처리 및 기본 검증 로직이 포함되어 있습니다.
 
 👤 Author
-
 GitHub: https://github.com/nekh802
