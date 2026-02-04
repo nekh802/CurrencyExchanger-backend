@@ -4,6 +4,7 @@ FastAPI 기반의 환율 계산 API 서버입니다.
 외부 환율 API를 사용해 실시간 환율을 조회하고,
 프론트엔드(Vercel)에서 호출하여 환율 변환 결과를 제공합니다.
 
+
 🔧 Tech Stack
 - Python 3
 - FastAPI
@@ -11,14 +12,23 @@ FastAPI 기반의 환율 계산 API 서버입니다.
 - Docker (Render 배포)
 - REST API
 
+
 📁 Project Structure
 backend/
+
 ├── api_server.py      # FastAPI 엔트리 포인트
+
 ├── Core.py            # 환율 계산 로직
+
 ├── rates_api.py       # 외부 환율 API 호출
+
 ├── requirements.txt
+
 ├── Procfile
+
 └── static/
+
+
 
 🚀 API Endpoints
 GET /convert
