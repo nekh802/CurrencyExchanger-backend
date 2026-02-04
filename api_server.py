@@ -18,9 +18,7 @@ app.add_middleware(
     allow_origins=[
         "http://localhost:5173",
         "http://127.0.0.1:5173",
-        "https://currencyexchanger-frontend2.vercel.app",
-        "https://currencyexchanger-frontend.vercel.app",
-   
+        "https://currencyexchanger-frontend3.vercel.app",
     ],
     allow_credentials=True,
     allow_methods=["*"],
@@ -65,3 +63,5 @@ def convert(amount: float, from_currency: str, to_currency: str):
     except Exception as e:
         # 개발용: 에러 메시지 노출 (배포에선 조심)
         raise HTTPException(status_code=500, detail=f"{type(e).__name__}: {e}")
+
+# deploy test: 2026-02-04
